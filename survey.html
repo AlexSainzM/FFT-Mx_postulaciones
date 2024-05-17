@@ -50,8 +50,120 @@
             </header>
 
             <main>
-                <h3>Comité de trabajadores</h3>
-                <p class="fs-6 col-md-8">Elecciones 2024</p>
+
+                <!--Botón del modal-->
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8 align-self-start">
+                            <h3>Comité de trabajadores</h3>
+                            <p class="fs-6 col-md-8">Elecciones 2024</p>
+                        </div>
+                        
+                        <div class="col-md-4 align-self-end">
+                            <div class="mb-5">
+                                <button type="button" class="btn btn-lg px-4 buttonFFTGreen" data-bs-toggle="modal" data-bs-target="#staticBackdropLive" onclick="mifuncion()" id="boton11">
+                                    Ver instrucciones
+                                </button>
+                              </div>
+                        </div>
+                      </div>
+                </div>
+
+                <!--Vista del modal con instrucciones-->
+                <div class="modal fade" id="staticBackdropLive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLiveLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLiveLabel">Te pedimos participar con responsabilidad en este ejercicio</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p class="col-md-12">En este proceso, <strong>solo podran participar</strong>  personal con contrato indeterminado - <strong>PLANTA</strong></p>
+                          <p class="col-md-12">Puestos a cubrir:</p>
+                          <ul>                    
+                            <li>1 Presindente</li>
+                            <li>1 Secretario</li>
+                            <li>4 Auxiliares</li>
+                          </ul>
+                          <p class="col-md-12">Deberás elegir a 3 trabajadores(as) del área <strong>Técnico - Administrativa</strong> de las siguientes areas:</p>
+                          <div class="col-md-12">
+                            <div class="row align-items-center">
+                              <div class="col">
+                                <ul>
+                                  <li>Ingeniería Electrica</li>
+                                  <li>Ingeniería Mécanica</li>
+                                  <li>Gestión de proyectos</li>
+                                  <li>Seguridad Industrial</li>
+                                  <li>Flota de vehículos</li>
+                                  <li>Contabilidad</li>                        
+                                </ul>
+                              </div>
+                              <div class="col">
+                                <ul>
+                                  <li>Compras</li>
+                                  <li>Controlling</li>
+                                  <li>Ventas</li>
+                                  <li>Calculación</li>
+                                  <li>IT</li>
+                                  <li>Gestión de la calidad</li>
+                                </ul>
+                              </div>                      
+                            </div>
+                            
+                          </div>
+        
+                          <p class="col-md-12">Deberás elegir a 3 trabajadores(as) del área <strong>Productiva</strong> de las siguientes áreas:</p>
+                          <div class="col-md-12">
+                            <div class="row align-items-center">
+                              <div class="col">
+                                <ul>
+                                  <li>Área Técnica</li>
+                                  <li>Fabricación</li>
+                                  <li>Ensamble de componentes</li>
+                                  <li>Control de calidad</li>
+                                </ul>
+                              </div>
+                              <div class="col">
+                                <ul>                          
+                                  <li>Logística</li>                        
+                                  <li>Operaciones de ensamble</li>
+                                  <li>Almacén</li>
+                                  <li>Gestión de facilidades</li>
+                                  <li>Calidad de producto</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <p class="col-md-12"><Strong>Puedes postularte a ti mismo</Strong></p>
+                        </div>
+                        <div class="modal-footer">
+                          <div class="mb-3">
+                            <a href="./survey.html" class="btn btn-lg px-4 buttonFFTGreen" >Continuar</a>
+                          </div>
+                          <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cancelar</button>
+                          <!--Botones del Modal deshabilidatados
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Understood</button>
+                          -->
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <form class="needs-validation" novalidate action="">
+                    <label for="exampleDataList" class="form-label">Ejemplo de lista de datos</label>
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
+                    <datalist id="datalistOptions">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                </form>
+
+                
                 
 
                 <form class="needs-validation"  novalidate> <!--action="https://formspree.io/f/mwkgzebo"
@@ -388,6 +500,7 @@
         </div>
 
         <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./script.js"></script>
 
     </body>
 
