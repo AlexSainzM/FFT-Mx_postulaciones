@@ -66,7 +66,7 @@
                                 </button>
                               </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
 
                 <!--Vista del modal con instrucciones-->
@@ -151,17 +151,7 @@
                     </div>
                 </div>
 
-                <form class="needs-validation" novalidate action="">
-                    <label for="exampleDataList" class="form-label">Ejemplo de lista de datos</label>
-                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
-                    <datalist id="datalistOptions">
-                        <option value="San Francisco">
-                        <option value="New York">
-                        <option value="Seattle">
-                        <option value="Los Angeles">
-                        <option value="Chicago">
-                    </datalist>
-                </form>
+                
 
                 
                 
@@ -175,61 +165,51 @@
                             <div class="accordion-item">
                                 <h4 class="accordion-header" id="headingOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        <h5>¿Qué tipo de reporte desear realizar?</h5>
+                                        <h5>¿A quíen deseas nominar como presidente?</h5>
                                     </button>
                                 </h4>
                                 <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                     
-                                        <h6 class="mb-3">Quiero levantar una:</h6>
+                                        <h6 class="mb-3">Puedes nominar solo a una persona como presidente ya sea del personal del área Técnico - Administrativa o de Producción.</h6>
 
-                                        <div class="my-3">
-                                            <div class="form-check">
-                                            <input id="queja" name="tipoReporte" type="radio" class="form-check-input" checked required>
-                                            <label class="form-check-label" for="credit">Queja</label>
+                                        <div class="col-md-12">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Técnico - Administrativo</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Producción</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList2" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>                      
                                             </div>
-                                            <div class="form-check">
-                                            <input id="reclamacion" name="tipoReporte" type="radio" class="form-check-input" required>
-                                            <label class="form-check-label" for="debit">Reclamación</label>
-                                            </div>
+                                            
                                         </div>
+
 
                                         <hr class="my-4">
-
-                                        <h6 class="mb-3">¿Con qué situación está relacionado su reporte?</h6>
-                                        
-                                        <div class="my-3">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                <label class="form-check-label" for="same-address">Violencia / Hostigamiento laboral</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                <label class="form-check-label" for="same-address">Acoso Sexual</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="same-address" name="reporteRelacionadoCon">
-                                                <label class="form-check-label" for="same-address">Conductas no éticas</label>
-                                            </div>
-                                        </div>
-
-                                        <hr class="my-4">
-
-                                        <h6 class="mb-3">¿Desea que su reporte sea anónimo?</h6>
-
-                                        <div class="my-3">
-                                            <div class="form-check">
-                                            <input id="rAnonimoSi" name="rAnonimo" type="radio" class="form-check-input" checked required>
-                                            <label class="form-check-label" for="credit">Si</label>
-                                            </div>
-                                            <div class="form-check">
-                                            <input id="rAnonimoNo" name="rAnonimo" type="radio" class="form-check-input" required>
-                                            <label class="form-check-label" for="debit">No</label>
-                                            </div>
-                                        </div>
 
                                         <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            <h5>Continuar</h5>
+                                            <h5>Siguiente</h5>
                                         </button>
                                 
                                         
@@ -240,84 +220,52 @@
                             <div class="accordion-item">
                                 <h4 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <h5>¿Quién presenta la queja o reclamación?</h5>
+                                        <h5>¿A quíen deseas nominar como secretario?</h5>
                                     </button>
                                 </h4>
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                     
-                                        <h6 class="mb-3">Por favor, introduce los datos de la persona que presenta la queja o reclamación</h6>
-                                
-                                        <div class="row gy-3">
-                                            
-                                            <div class="col-md-6">
-                                            <label for="nombreAfectado" class="form-label">Nombre:</label>
-                                            <input type="text" class="form-control" id="nombreAfectado" name="nombreAfectado" placeholder="" required>
-                                            <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                            <div class="invalid-feedback">
-                                                No has colocado un nombre
-                                            </div>
-                                            </div>
-                    
-                                            <div class="col-md-6">
-                                                <label for="apellidosAfectado" class="form-label">Apellidos:</label>
-                                                <input type="text" class="form-control" id="apellidosAfectado" name="apellidosAfectado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un apellido
-                                                </div>
-                                            </div>
-                    
-                                            <div class="col-md-6">
-                                                <label for="puestoAfectado" class="form-label">Puesto:</label>
-                                                <input type="text" class="form-control" id="puestoAfectado" name="puestoAfectado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un puesto
-                                                </div>
-                                            </div>
-                    
-                                            <div class="col-md-6">
-                                                <label for="departamentoAfectado" class="form-label">Area o departamento:</label>
-                                                <input type="text" class="form-control" id="departamentoAfectado" name="departamentoAfectado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un area o departamento
-                                                </div>
-                                            </div>
-                    
-                                            <div class="col-md-6">
-                                                <label for="telefonoAfectado" class="form-label">Teléfono de contacto:</label>
-                                                <input type="text" class="form-control" id="telefonoAfectado" name="telefonoAfectado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un telefono de contacto.
-                                                </div>
-                                            </div>
-                    
-                                            <div class="col-md-6">
-                                                <label for="emailAfectado" class="form-label">Correo electrónico:</label>
-                                                <input type="text" class="form-control" id="emailAfectado" name="emailAfectado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un email de contacto.
-                                                </div>
-                                            </div>
-                    
-                                            <div class="col-md-6">
-                                                <label for="jefeAfectado" class="form-label">Jefe Inmediato:</label>
-                                                <input type="text" class="form-control" id="jefeAfectado" name="jefeAfectado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado el nombre de tu jefe o gerente.
-                                                </div>
-                                            </div>
+                                        <h6 class="mb-3">Puedes nominar solo a una persona como secretario ya sea del personal del área Técnico - Administrativa o de Producción.</h6>
 
-                                            <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                <h5>Continuar</h5>
-                                            </button>
+                                        <div class="col-md-12">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Técnico - Administrativo</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Producción</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList2" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>                      
+                                            </div>
                                             
                                         </div>
+
+
+                                        <hr class="my-4">
+
+                                        <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <h5>Siguiente</h5>
+                                        </button>
                                         
                                     </div>
                                 </div>
@@ -326,161 +274,123 @@
                             <div class="accordion-item">
                                 <h4 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <h5>¿Contra quien se presenta la queja o reclamación?</h5>
+                                        <h5>¿A quienes deseas nominar como auxiliares?</h5>
                                     </button>
                                 </h4>
                                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
                                         
-                                        <h6 class="mb-3">Por favor, introduce los datos de la persona contra la que se presenta la queja o reclamación</h6>
+                                        <h6 class="mb-3">Puedes nominar a 4 personas como auxiliares ya sea del personal del área Técnico - Administrativa o de Producción.</h6>
 
-                                
-                                        <div class="row gy-3">
-                                            
-                                            <div class="col-md-6">
-                                                <label for="nombreAcusado" class="form-label">Nombre:</label>
-                                                <input type="text" class="form-control" id="nombreAcusado" name="nombreAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un nombre
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-6">
-                                                <label for="apellidosAcusado" class="form-label">Apellidos:</label>
-                                                <input type="text" class="form-control" id="apellidosAcusado" name="apellidosAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un apellido
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-6">
-                                                <label for="puestoAcusado" class="form-label">Puesto:</label>
-                                                <input type="text" class="form-control" id="puestoAcusado" name="puestoAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un puesto
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-6">
-                                                <label for="departamentoAcusado" class="form-label">Area o departamento:</label>
-                                                <input type="text" class="form-control" id="departamentoAcusado" name="departamentoAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un area o departamento
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-6">
-                                                <label for="telefonoAcusado" class="form-label">Teléfono de contacto:</label>
-                                                <input type="text" class="form-control" id="telefonoAcusado" name="telefonoAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un telefono.
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-6">
-                                                <label for="emailAcusado" class="form-label">Correo electrónico:</label>
-                                                <input type="text" class="form-control" id="emailAcusado" name="emailAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado un email.
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-md-6">
-                                                <label for="jefeAcusado" class="form-label">Jefe Inmediato:</label>
-                                                <input type="text" class="form-control" id="jefeAcusado" name="jefeAcusado" placeholder="" required>
-                                                <!-- <small class="text-muted">Full name as displayed on card</small> -->
-                                                <div class="invalid-feedback">
-                                                    No has colocado el nombre del jefe inmediato de la persona contra la que se presenta la reclamación.
-                                                </div>
-                                            </div>
+                                        <h6 class="mb-3"><Strong>Recuerda que deberás haber escogido a 3 personas del área Técnico - Administrativa y a 3 del area de Producción.</Strong></h6>
 
-                                            <button class="w-100 btn btn-primary btn-lg buttonFFTGreen mb-3"  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                <h5>Continuar</h5>
-                                            </button>
+                                        <div class="col-md-12">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Técnico - Administrativo</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Producción</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList2" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>                      
+                                            </div>
                                             
                                         </div>
 
-                                        
-        
-                                    </div>
-                                </div>
-                            
-                            </div>
+                                        <hr class="my-4">
 
-                            <div class="accordion-item">
-                                <h4 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <h5>Guia de hechos</h5>
-                                    </button>
-                                </h4>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        
-                                        <h6 class="mb-3">Guía de los hechos</h6>
-
-                                        <p class="mb-3">Para garantizar una respuesta oportuna a su reporte, escriba a continuación los hechos relevantes al asunto.</h4>
-                                
-                                        <div class="row gy-3">
-                                            <div class="col-12">
-                                                <label for="queSucedio" class="form-label">¿Qué fue lo que sucedió?</label>
-                                                <input type="text" class="form-control" id="queSucedio" name="queSucedio" placeholder="" required>
-                                                <div class="invalid-feedback">
-                                                Describa que fue lo que sucedió.
+                                        <div class="col-md-12">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Técnico - Administrativo</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
                                                 </div>
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Producción</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList2" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>                      
                                             </div>
-        
-                                            <div class="col-12">
-                                                <label for="cuandoSucedio" class="form-label">¿Cuando sucedió?</label>
-                                                <input type="date" class="form-control" id="cuandoSucedio" name="cuandoSucedio" placeholder="" required>
-                                                <div class="invalid-feedback">
-                                                Describa cuando y a que hora sucedió.
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <label for="cuandoSucedio" class="form-label">¿A qué hora sucedió?</label>
-                                                <input type="text" class="form-control" id="horaSucedio" name="horaSucedio" placeholder="" required>
-                                                <div class="invalid-feedback">
-                                                Describa cuando y a que hora sucedió.
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-12">
-                                                <label for="dondeSucedio" class="form-label">¿Dónde sucedió?</label>
-                                                <input type="text" class="form-control" id="dondeSucedio" name="dondeSucedio" placeholder="" required>
-                                                <div class="invalid-feedback">
-                                                Describa donde sucedió.
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-12">
-                                                <label for="involucrados" class="form-label">¿Quién o quienes estuvieron involucrados?</label>
-                                                <input type="text" class="form-control" id="involucrados" name="involucrados" placeholder="" required>
-                                                <div class="invalid-feedback">
-                                                Describa quién o quienes estuvieron involucrados.
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-12">
-                                                <label for="involucradosActos" class="form-label">¿Qué hizo cada persona?</label>
-                                                <input type="text" class="form-control" id="involucradosActos" name="involucradosActos" placeholder="" required>
-                                                <div class="invalid-feedback">
-                                                Describa qué hizo cada una de las persona involucradas.
-                                                </div>
-                                            </div>
-        
-                                            <button class="w-100 btn btn-primary btn-lg buttonFFTGreen" type="submit">Enviar reporte</button>
                                             
                                         </div>
 
-                                        
-        
+                                        <hr class="my-4">
+
+                                        <div class="col-md-12">
+                                            <div class="row align-items-center">
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Técnico - Administrativo</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>
+                                                <div class="col">
+                                                    <form class="needs-validation" novalidate action="">
+                                                        <label for="exampleDataList" class="form-label">Personal Producción</label>
+                                                        <input class="form-control" list="datalistOptions" id="exampleDataList2" placeholder="Type to search..." disabled>
+                                                        <datalist id="datalistOptions">
+                                                            <option value="San Francisco">
+                                                            <option value="New York">
+                                                            <option value="Seattle">
+                                                            <option value="Los Angeles">
+                                                            <option value="Chicago">
+                                                        </datalist>
+                                                    </form>
+                                                </div>                      
+                                            </div>
+                                            
+                                        </div>
+
+
+                                        <hr class="my-4">
+
+                                        <button class="w-100 btn btn-lg buttonFFTGreen mb-3"  type="button">
+                                            <h5>Finalizar cuestionario</h5>
+                                        </button>
+
                                     </div>
                                 </div>
                             
