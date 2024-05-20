@@ -74,6 +74,7 @@ function contadorPRSum(inputElement){
         console.log("PR" + contadorProd);
         inputElement.disabled = false;
         alert("Ya has seleccionado a 3 personas del personal PR");
+        return true;
     }
 }
 
@@ -105,7 +106,8 @@ function inputsDeshabilitadosPresPR() {
     if (inputProdPres.value !== ""){
         //inputATPres.value = "";
         inputATPres.disabled = true;
-        contadorPRSum(inputProdPres);
+        //contadorPRSum(inputProdPres);
+        if (contadorPRSum(inputProdPres)){inputATPres.disabled = false;}
     } else {
         inputATPres.disabled = false;
         contadorPRRes();
@@ -131,7 +133,8 @@ function inputsDeshabilitadosSecPR() {
     if (inputProdSec.value !== ""){
         //inputATSec.value = "";
         inputATSec.disabled = true;  
-        contadorPRSum(inputProdSec);      
+        //contadorPRSum(inputProdSec);      
+        if (contadorPRSum(inputProdSec)){inputATSec.disabled = false;}
     } else {
         inputATSec.disabled = false;
         contadorPRRes();
@@ -160,8 +163,7 @@ function inputsDeshabilitadosAux1PR() {
         //inputATAux1.value = "";
         inputATAux1.disabled = true;        
         //contadorPRSum(inputProdAux1);
-        if (contadorATSum(inputProdAux1)){inputATAux1.disabled = false;}
-
+        if (contadorPRSum(inputProdAux1)){inputATAux1.disabled = false;}
     } else {
         inputATAux1.disabled = false;
         contadorPRRes();
@@ -191,7 +193,9 @@ function inputsDeshabilitadosAux2PR() {
     if (inputProdAux2.value !== ""){
         //inputATAux2.value = "";
         inputATAux2.disabled = true;   
-        contadorPRSum(inputProdAux2);     
+        //contadorPRSum(inputProdAux2);     
+        if (contadorPRSum(inputProdAux2)){inputATAux2.disabled = false;}
+
     } else {
         inputATAux2.disabled = false;
         contadorPRRes();
@@ -218,7 +222,9 @@ function inputsDeshabilitadosAux3PR() {
     if (inputProdAux3.value !== ""){
         //inputATAux3.value = "";
         inputATAux3.disabled = true;    
-        contadorPRSum(inputProdAux3);    
+        //contadorPRSum(inputProdAux3);    
+        if (contadorPRSum(inputProdAux3)){inputATAux3.disabled = false;}
+
     } else {
         inputATAux3.disabled = false;
         contadorPRRes();
@@ -246,7 +252,9 @@ function inputsDeshabilitadosAux4PR() {
     if (inputProdAux4.value !== ""){
         //inputATAux4.value = "";
         inputATAux4.disabled = true;
-        contadorPRSum(inputProdAux4);       
+        //contadorPRSum(inputProdAux4);       
+        if (contadorPRSum(inputProdAux4)){inputATAux4.disabled = false;}
+
     } else {
         inputATAux4.disabled = false;
         contadorPRRes();
