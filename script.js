@@ -1,4 +1,3 @@
-
 //Primero traemos a los inputs del formulario y llegan limpios
 let inputATPres = document.getElementById("inputATPresidente");
 let inputProdPres = document.getElementById("inputProdPresidente");
@@ -12,9 +11,9 @@ let inputProdAux1 = document.getElementById("inputProdAuxiliar1");
 let inputProdAux2 = document.getElementById("inputProdAuxiliar2");
 let inputProdAux3 = document.getElementById("inputProdAuxiliar3");
 let inputProdAux4 = document.getElementById("inputProdAuxiliar4");
+let botonEnviarC = document.getElementById("botonEnviarCuestionario");
 
 //Ahora creamos una funcion que limpie los datos del formulario inicialmente
-
 inputATPres.value = "";
 inputProdPres.value = "";
 inputATSec.value = "";
@@ -29,31 +28,46 @@ inputProdAux3.value = "";
 inputProdAux4.value = "";
 
 
-console.log("Prueba1");
+//Inicializamos los contadores para la validación
+let contadorGeneral = 0;
+let contadorAT = 0;
+let contadorProd = 0;
 
-function inputsDeshabilitados() {
+
+function inputsDeshabilitadosPres() {
     //Presidente
 
     if (inputATPres.value !== ""){
-        inputProdPres.value = "";
+        //inputProdPres.value = "";
         inputProdPres.disabled = true;
+        contadorAT =+ 1;
+        console.log("AT" + contadorAT);
     } else {
-        inputProdPres.disabled = false;
+        inputProdPres.disabled = false
+        contadorAT = contadorAT - 1;
+        console.log("AT" + contadorAT);
     }
     if (inputProdPres.value !== ""){
-        inputATPres.value = "";
+        //inputATPres.value = "";
         inputATPres.disabled = true;        
     } else {
         inputATPres.disabled = false;
     }
 
+}
+
+function inputsDeshabilitadosSec() {
     //Secretario
 
     if (inputATSec.value !== ""){
-        inputProdSec.value = "";
+        //inputProdSec.value = "";
         inputProdSec.disabled = true;
+        contadorAT = contadorAT + 1;
+        console.log("AT" + contadorAT);
     } else {
         inputProdSec.disabled = false;
+        contadorAT = contadorAT - 1;
+        console.log("AT" + contadorAT);
     }
     if (inputProdSec.value !== ""){
         inputATSec.value = "";
@@ -62,13 +76,20 @@ function inputsDeshabilitados() {
         inputATSec.disabled = false;
     }
 
+}
+
+function inputsDeshabilitadosAux1() {
     //Auxiliar1
 
     if (inputATAux1.value !== ""){
-        inputProdAux1.value = "";
+        //inputProdAux1.value = "";
         inputProdAux1.disabled = true;
+        contadorAT = contadorAT + 1;
+        console.log("AT" + contadorAT);
     } else {
         inputProdAux1.disabled = false;
+        contadorAT = contadorAT - 1;
+        console.log("AT" + contadorAT);
     }
     if (inputProdAux1.value !== ""){
         inputATAux1.value = "";
@@ -77,13 +98,21 @@ function inputsDeshabilitados() {
         inputATAux1.disabled = false;
     }
 
+}
+
+
+function inputsDeshabilitadosAux2() {
     //Auxiliar2
 
     if (inputATAux2.value !== ""){
-        inputProdAux2.value = "";
+        //inputProdAux2.value = "";
         inputProdAux2.disabled = true;
+        contadorAT = contadorAT + 1;
+        console.log("AT" + contadorAT);
     } else {
         inputProdAux2.disabled = false;
+        contadorAT = contadorAT - 1;
+        console.log("AT" + contadorAT);
     }
     if (inputProdAux2.value !== ""){
         inputATAux2.value = "";
@@ -92,13 +121,20 @@ function inputsDeshabilitados() {
         inputATAux2.disabled = false;
     }
 
+}
+
+function inputsDeshabilitadosAux3() {
     //Auxiliar3 
 
     if (inputATAux3.value !== ""){
-        inputProdAux3.value = "";
+        //inputProdAux3.value = "";
         inputProdAux3.disabled = true;
+        contadorAT = contadorAT + 1;
+        console.log("AT" + contadorAT);
     } else {
         inputProdAux3.disabled = false;
+        contadorAT = contadorAT - 1;
+        console.log("AT" + contadorAT);
     }
     if (inputProdAux3.value !== ""){
         inputATAux3.value = "";
@@ -107,13 +143,20 @@ function inputsDeshabilitados() {
         inputATAux3.disabled = false;
     }
 
+}
+
+function inputsDeshabilitadosAux4() {
     //Auxiliar4
 
     if (inputATAux4.value !== ""){
-        inputProdAux4.value = "";
+        //inputProdAux4.value = "";
         inputProdAux4.disabled = true;
+        contadorAT = contadorAT + 1;
+        console.log("AT" + contadorAT);
     } else {
         inputProdAux4.disabled = false;
+        contadorAT = contadorAT - 1;
+        console.log("AT" + contadorAT);
     }
     if (inputProdAux4.value !== ""){
         inputATAux4.value = "";
@@ -122,4 +165,9 @@ function inputsDeshabilitados() {
         inputATAux4.disabled = false;
     }
 
+}
+
+
+function mostrarV() {
+    console.log(contadorAT);
 }
