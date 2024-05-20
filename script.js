@@ -33,136 +33,180 @@ let contadorGeneral = 0;
 let contadorAT = 0;
 let contadorProd = 0;
 
+function contadorATSum(){
+    contadorAT = contadorAT + 1;
+    console.log("AT" + contadorAT);
+}
 
-function inputsDeshabilitadosPres() {
-    //Presidente
+function contadorATRes() {
+    contadorAT = contadorAT - 1;
+    console.log("AT" + contadorAT);
+}
 
+function contadorPRSum(){
+    contadorProd = contadorProd + 1;
+    console.log("PR" + contadorProd);
+}
+
+function contadorPRRes() {
+    contadorProd = contadorProd - 1;
+    console.log("PR" + contadorProd);
+}
+
+
+function inputsDeshabilitadosPresAT() {
+    
+    //PresidenteAT
     if (inputATPres.value !== ""){
         //inputProdPres.value = "";
         inputProdPres.disabled = true;
-        contadorAT =+ 1;
-        console.log("AT" + contadorAT);
+        contadorATSum();
     } else {
         inputProdPres.disabled = false
-        contadorAT = contadorAT - 1;
-        console.log("AT" + contadorAT);
+        contadorATRes();
     }
-    if (inputProdPres.value !== ""){
-        //inputATPres.value = "";
-        inputATPres.disabled = true;        
-    } else {
-        inputATPres.disabled = false;
-    }
-
 }
 
-function inputsDeshabilitadosSec() {
-    //Secretario
+function inputsDeshabilitadosPresPR() {
+    
+    //PresidentePR
+    if (inputProdPres.value !== ""){
+        //inputATPres.value = "";
+        inputATPres.disabled = true;
+        contadorPRSum();
+    } else {
+        inputATPres.disabled = false;
+        contadorPRRes();
+    }
+}
+
+function inputsDeshabilitadosSecAT() {
+    //SecretarioAT
 
     if (inputATSec.value !== ""){
         //inputProdSec.value = "";
         inputProdSec.disabled = true;
-        contadorAT = contadorAT + 1;
-        console.log("AT" + contadorAT);
+        contadorATSum();
     } else {
         inputProdSec.disabled = false;
-        contadorAT = contadorAT - 1;
-        console.log("AT" + contadorAT);
+        contadorATRes();
     }
-    if (inputProdSec.value !== ""){
-        inputATSec.value = "";
-        inputATSec.disabled = true;        
-    } else {
-        inputATSec.disabled = false;
-    }
-
 }
 
-function inputsDeshabilitadosAux1() {
-    //Auxiliar1
+function inputsDeshabilitadosSecPR() {
+
+    if (inputProdSec.value !== ""){
+        //inputATSec.value = "";
+        inputATSec.disabled = true;  
+        contadorPRSum();      
+    } else {
+        inputATSec.disabled = false;
+        contadorPRRes();
+    }
+}
+
+function inputsDeshabilitadosAux1AT() {
+    //Auxiliar1AT
 
     if (inputATAux1.value !== ""){
         //inputProdAux1.value = "";
         inputProdAux1.disabled = true;
-        contadorAT = contadorAT + 1;
-        console.log("AT" + contadorAT);
+        contadorATSum();
     } else {
         inputProdAux1.disabled = false;
-        contadorAT = contadorAT - 1;
-        console.log("AT" + contadorAT);
+        contadorATRes();
     }
+}
+
+function inputsDeshabilitadosAux1PR() {
+    //Auxiliar1PR
+
     if (inputProdAux1.value !== ""){
-        inputATAux1.value = "";
+        //inputATAux1.value = "";
         inputATAux1.disabled = true;        
+        contadorPRSum();
     } else {
         inputATAux1.disabled = false;
+        contadorPRRes();
     }
 
 }
 
 
-function inputsDeshabilitadosAux2() {
-    //Auxiliar2
+function inputsDeshabilitadosAux2AT() {
+    //Auxiliar2AT
 
     if (inputATAux2.value !== ""){
         //inputProdAux2.value = "";
         inputProdAux2.disabled = true;
-        contadorAT = contadorAT + 1;
-        console.log("AT" + contadorAT);
+        contadorATSum();
     } else {
         inputProdAux2.disabled = false;
-        contadorAT = contadorAT - 1;
-        console.log("AT" + contadorAT);
+        contadorATRes();
     }
-    if (inputProdAux2.value !== ""){
-        inputATAux2.value = "";
-        inputATAux2.disabled = true;        
-    } else {
-        inputATAux2.disabled = false;
-    }
-
 }
 
-function inputsDeshabilitadosAux3() {
+function inputsDeshabilitadosAux2PR() {
+    //Auxiliar2PR
+
+    if (inputProdAux2.value !== ""){
+        //inputATAux2.value = "";
+        inputATAux2.disabled = true;   
+        contadorPRSum();     
+    } else {
+        inputATAux2.disabled = false;
+        contadorPRRes();
+    }
+}
+
+function inputsDeshabilitadosAux3AT() {
     //Auxiliar3 
 
     if (inputATAux3.value !== ""){
         //inputProdAux3.value = "";
         inputProdAux3.disabled = true;
-        contadorAT = contadorAT + 1;
-        console.log("AT" + contadorAT);
+        contadorATSum();
     } else {
         inputProdAux3.disabled = false;
-        contadorAT = contadorAT - 1;
-        console.log("AT" + contadorAT);
+        contadorATRes();
     }
+}
+
+function inputsDeshabilitadosAux3PR() {
+
     if (inputProdAux3.value !== ""){
-        inputATAux3.value = "";
-        inputATAux3.disabled = true;        
+        //inputATAux3.value = "";
+        inputATAux3.disabled = true;    
+        contadorPRSum();    
     } else {
         inputATAux3.disabled = false;
+        contadorPRRes();
     }
 
 }
 
-function inputsDeshabilitadosAux4() {
+function inputsDeshabilitadosAux4AT() {
     //Auxiliar4
 
     if (inputATAux4.value !== ""){
         //inputProdAux4.value = "";
         inputProdAux4.disabled = true;
-        contadorAT = contadorAT + 1;
-        console.log("AT" + contadorAT);
+        contadorATSum();
     } else {
         inputProdAux4.disabled = false;
-        contadorAT = contadorAT - 1;
-        console.log("AT" + contadorAT);
+        contadorATRes();
     }
+}
+
+function inputsDeshabilitadosAux4PR() {
+
     if (inputProdAux4.value !== ""){
-        inputATAux4.value = "";
-        inputATAux4.disabled = true;        
+        //inputATAux4.value = "";
+        inputATAux4.disabled = true;
+        contadorPRSum();       
     } else {
         inputATAux4.disabled = false;
+        contadorPRRes();
     }
 
 }
