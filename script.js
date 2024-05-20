@@ -30,27 +30,33 @@ inputProdAux4.value = "";
 
 //Inicializamos los contadores para la validación
 let contadorGeneral = 0;
-let contadorAT = 0;
+let contadorAT = 3;
 let contadorProd = 0;
 
 function validacion3v3() {
 
     if (contadorAT >= 4) {
         //inputATPres.disabled = true;
-        alert("Ya has seleccionado a 3 personas del personal AT");
-        
+        //alert("Ya has seleccionado a 3 personas del personal AT");
+        return contadorAT;
+    } else {
+        if (contadorProd >= 4){
+            //alert("Ya has seleccionado a 3 personas del personal de Producción");
+            return contadorProd;
+        }
     }
-    if (contadorProd >= 4){
-        alert("Ya has seleccionado a 3 personas del personal de Producción");
-    }
+    
 }
 
 alert("prueba");
 
-function contadorATSum(){
+function contadorATSum(inputElement){
     contadorAT = contadorAT + 1;
     console.log("AT" + contadorAT);
-    validacion3v3();
+    //validacion3v3();
+    if (validacion3v3() >= 4){
+        inputElement.value = "";
+    } 
 }
 
 function contadorATRes() {
@@ -79,7 +85,7 @@ function inputsDeshabilitadosPresAT() {
     if (inputATPres.value !== ""){
         //inputProdPres.value = "";
         inputProdPres.disabled = true;
-        contadorATSum();
+        contadorATSum(inputATPres);
     } else {
         inputProdPres.disabled = false
         contadorATRes();
