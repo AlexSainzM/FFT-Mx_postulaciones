@@ -33,30 +33,49 @@ let contadorGeneral = 0;
 let contadorAT = 0;
 let contadorProd = 0;
 
+function validacion3v3() {
+
+    if (contadorAT >= 4) {
+        //inputATPres.disabled = true;
+        alert("Ya has seleccionado a 3 personas del personal AT");
+        
+    }
+    if (contadorProd >= 4){
+        alert("Ya has seleccionado a 3 personas del personal de Producción");
+    }
+}
+
+alert("prueba");
+
 function contadorATSum(){
     contadorAT = contadorAT + 1;
     console.log("AT" + contadorAT);
+    validacion3v3();
 }
 
 function contadorATRes() {
     contadorAT = contadorAT - 1;
     console.log("AT" + contadorAT);
+    validacion3v3();
 }
 
 function contadorPRSum(){
     contadorProd = contadorProd + 1;
     console.log("PR" + contadorProd);
+    validacion3v3();
 }
 
 function contadorPRRes() {
     contadorProd = contadorProd - 1;
     console.log("PR" + contadorProd);
+    validacion3v3();
 }
 
 
 function inputsDeshabilitadosPresAT() {
     
     //PresidenteAT
+
     if (inputATPres.value !== ""){
         //inputProdPres.value = "";
         inputProdPres.disabled = true;
