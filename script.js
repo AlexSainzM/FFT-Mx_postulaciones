@@ -34,6 +34,53 @@ let contadorGeneral = 0;
 let contadorAT = 0;
 let contadorProd = 0;
 
+//validacion de valores repetidos
+function noReapeatedInputs() {
+    //Primero obtenemos los valores de los inputs
+    const inputs = [
+        inputATPres.value,
+        inputProdPres.value,
+        inputATSec.value,
+        inputProdSec.value,
+        inputATAux1.value,
+        inputATAux2.value,
+        inputATAux3.value,
+        inputATAux4.value,
+        inputProdAux1.value, 
+        inputProdAux2.value,
+        inputProdAux3.value,
+        inputProdAux4.value,
+       
+        ];
+
+        //Creamos un objeto para rastrear las ocurrencias de cada valor. 
+        const ocurrencias = {};
+        console.log("hola");
+
+        for (let i = 0; i < inputs.length; i++) {
+            console.log("cuenta");
+            const valor = inputs[i];
+            if (ocurrencias[valor]){
+                //Si el valor ya está en el objeto, incrementa el contador
+                ocurrencias[valor]++;
+            } else {
+                ocurrencias[valor] = 1;
+            }
+        }
+
+        //Verifica si hay algún valor con mas de una ocurrencia 
+        for (let valor in ocurrencias) {
+            if (ocurrencias[valor] > 1) {
+                alert("Se han encontrado entradas repetidas. Por favor revisa tus respuestas. No es posible nominar 2 veces a la misma persona");
+                return;
+            }
+        }
+
+    alert('No hay entradas repetidas');
+
+    
+}
+
 
 //Esta funcion retorna el valor del contador que este execiendo las 3 posibles selecciones. 
 function validacion3v3() {
@@ -52,6 +99,7 @@ function validacion3v3() {
 function contadorATSum(inputElement){
     contadorAT = contadorAT + 1;
     console.log("AT" + contadorAT);
+    
     if (validacion3v3() >= 4){
         inputElement.value = "";
         contadorAT = contadorAT - 1;
@@ -74,6 +122,7 @@ function contadorATRes() {
 function contadorPRSum(inputElement){
     contadorProd = contadorProd + 1;
     console.log("PR" + contadorProd);
+    
     if (validacion3v3() >= 4){
         inputElement.value = "";
         contadorProd = contadorProd - 1;
@@ -104,6 +153,7 @@ function inputsDeshabilitadosPresAT() {
         inputProdPres.disabled = true;
         //contadorATSum(inputATPres);
         if (contadorATSum(inputATPres)){inputProdPres.disabled = false;}
+        //noReapeatedInputs();
     } else {
         inputProdPres.disabled = false;
         contadorATRes();
@@ -133,6 +183,7 @@ function inputsDeshabilitadosSecAT() {
         inputProdSec.disabled = true;
         //contadorATSum(inputATSec);
         if (contadorATSum(inputATSec)){inputProdSec.disabled = false;}
+        //noReapeatedInputs();
     } else {
         inputProdSec.disabled = false;
         contadorATRes();
@@ -274,3 +325,8 @@ function inputsDeshabilitadosAux4PR() {
 }
 
 
+
+//Función del botón enviar formulario. 
+function botonSubmit() {
+    noReapeatedInputs();
+}
