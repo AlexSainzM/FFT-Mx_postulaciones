@@ -13,7 +13,8 @@ let inputProdAux3 = document.getElementById("inputProdAuxiliar3");
 let inputProdAux4 = document.getElementById("inputProdAuxiliar4");
 let botonEnviarC = document.getElementById("botonEnviarCuestionario");
 
-//Ahora creamos una funcion que limpie los datos del formulario inicialmente
+
+//Ahora creamos limpiamos los datos del formulario antes de comenzar
 inputATPres.value = "";
 inputProdPres.value = "";
 inputATSec.value = "";
@@ -33,10 +34,11 @@ let contadorGeneral = 0;
 let contadorAT = 0;
 let contadorProd = 0;
 
+
+//Esta funcion retorna el valor del contador que este execiendo las 3 posibles selecciones. 
 function validacion3v3() {
 
     if (contadorAT >= 4) {
-        //inputATPres.disabled = true;
         return contadorAT;
     } else {
         if (contadorProd >= 4){
@@ -45,8 +47,8 @@ function validacion3v3() {
     }
 }
 
-//alert("prueba");
 
+//Esta funcion para AT, verifica que no existan más de tres entradas y en caso de que si (que llegue a 4), limpia el ultimo elemento, envia una alerta y regresa el contador a 3. 
 function contadorATSum(inputElement){
     contadorAT = contadorAT + 1;
     console.log("AT" + contadorAT);
@@ -60,11 +62,15 @@ function contadorATSum(inputElement){
     } 
 }
 
+
+//Esta funcion para AT, resta en 1 al contador de AT en caso de que el usuario limpie alguna de las casillas de AT. 
 function contadorATRes() {
     contadorAT = contadorAT - 1;
     console.log("AT" + contadorAT);
 }
 
+
+////Esta funcion para Prod, verifica que no existan más de tres entradas y en caso de que si (que llegue a 4), limpia el ultimo elemento, envia una alerta y regresa el contador a 3.
 function contadorPRSum(inputElement){
     contadorProd = contadorProd + 1;
     console.log("PR" + contadorProd);
@@ -79,12 +85,16 @@ function contadorPRSum(inputElement){
 }
 
 
+//Esta funcion para Prod, resta en 1 al contador de producción en caso de que el usuario limpie alguna de las casillas de Prod.
 function contadorPRRes() {
     contadorProd = contadorProd - 1;
     console.log("PR" + contadorProd);
 }
 
 
+//Las siguientes funciones se ejecutan dependiendo del par de inputs en el que se este trabajando (Pres, Sec, Aux1, Aux2, Aux3, Aux4). Evalua el par y deshabilita su contra parte en caso de que se llene información en alguno de lo los pares de campos anteriormente mencionados. 
+//Las funciones contadorATSum y contadorATRes controlan los contadores de AT y respectivamente lo hacen las funciones PROD o PR. 
+//Estas funciones hacen llamados a otras funciones que validad que no exitan mas de 3 campos para AT, controlan los contadores, habilitan y deshabilitan los inputs y dan las alertas correspondientes.
 function inputsDeshabilitadosPresAT() {
     
     //PresidenteAT
@@ -95,10 +105,11 @@ function inputsDeshabilitadosPresAT() {
         //contadorATSum(inputATPres);
         if (contadorATSum(inputATPres)){inputProdPres.disabled = false;}
     } else {
-        inputProdPres.disabled = false
+        inputProdPres.disabled = false;
         contadorATRes();
     }
 }
+
 
 function inputsDeshabilitadosPresPR() {
     
@@ -263,6 +274,3 @@ function inputsDeshabilitadosAux4PR() {
 }
 
 
-function mostrarV() {
-    console.log(contadorAT);
-}
