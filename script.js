@@ -144,6 +144,9 @@ function contadorPRRes() {
 //Las siguientes funciones se ejecutan dependiendo del par de inputs en el que se este trabajando (Pres, Sec, Aux1, Aux2, Aux3, Aux4). Evalua el par y deshabilita su contra parte en caso de que se llene información en alguno de lo los pares de campos anteriormente mencionados. 
 //Las funciones contadorATSum y contadorATRes controlan los contadores de AT y respectivamente lo hacen las funciones PROD o PR. 
 //Estas funciones hacen llamados a otras funciones que validad que no exitan mas de 3 campos para AT, controlan los contadores, habilitan y deshabilitan los inputs y dan las alertas correspondientes.
+
+let inputATPresEmptyBefore = true;
+let inputATPresEmptyAfter = true;
 function inputsDeshabilitadosPresAT() {
     
     //PresidenteAT
@@ -151,16 +154,20 @@ function inputsDeshabilitadosPresAT() {
     if (inputATPres.value !== ""){
         //inputProdPres.value = "";
         inputProdPres.disabled = true;
+        if (inputATPresEmptyBefore && inputATPresEmptyAfter) {
+            if (contadorATSum(inputATPres)){inputProdPres.disabled = false;}
+        }
+        inputATPresEmptyBefore = false;
         //contadorATSum(inputATPres);
-        if (contadorATSum(inputATPres)){inputProdPres.disabled = false;}
-        //noReapeatedInputs();
     } else {
         inputProdPres.disabled = false;
         contadorATRes();
+        inputATPresEmptyBefore = true;
     }
 }
 
-
+let inputProdPresEmptyBefore = true;
+let inputProdPresEmptyAfter = true;
 function inputsDeshabilitadosPresPR() {
     
     //PresidentePR
@@ -168,10 +175,14 @@ function inputsDeshabilitadosPresPR() {
         //inputATPres.value = "";
         inputATPres.disabled = true;
         //contadorPRSum(inputProdPres);
-        if (contadorPRSum(inputProdPres)){inputATPres.disabled = false;}
+        if (inputProdPresEmptyBefore && inputProdPresEmptyAfter) {
+            if (contadorPRSum(inputProdPres)){inputATPres.disabled = false;}
+        }
+        inputProdPresEmptyBefore = false;
     } else {
         inputATPres.disabled = false;
         contadorPRRes();
+        inputProdPresEmptyBefore = true;
     }
 }
 
