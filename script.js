@@ -312,6 +312,9 @@ function inputsDeshabilitadosAux2PR() {
     }
 }
 
+
+let inputATAux3EmptyBefore = true;
+let inputATAux3EmptyAfter = true;
 function inputsDeshabilitadosAux3AT() {
     //Auxiliar3 
 
@@ -319,25 +322,34 @@ function inputsDeshabilitadosAux3AT() {
         //inputProdAux3.value = "";
         inputProdAux3.disabled = true;
         //contadorATSum(inputATAux3);
-        if (contadorATSum(inputATAux3)){inputProdAux3.disabled = false;}
-
+        if (inputATAux3EmptyBefore && inputATAux3EmptyAfter) {
+            if (contadorATSum(inputATAux3)){inputProdAux3.disabled = false;}
+        }
+        inputATAux3EmptyBefore = false;
     } else {
         inputProdAux3.disabled = false;
         contadorATRes();
+        inputATAux3EmptyBefore = true;
     }
 }
 
+
+let inputProdAux3EmptyBefore = true;
+let inputProdAux3EmptyAfter = true;
 function inputsDeshabilitadosAux3PR() {
 
     if (inputProdAux3.value !== ""){
         //inputATAux3.value = "";
         inputATAux3.disabled = true;    
         //contadorPRSum(inputProdAux3);    
-        if (contadorPRSum(inputProdAux3)){inputATAux3.disabled = false;}
-
+        if (inputProdAux3EmptyBefore && inputProdAux3EmptyAfter) {
+            if (contadorPRSum(inputProdAux3)){inputATAux3.disabled = false;}
+        }
+        inputProdAux3EmptyBefore = false;
     } else {
         inputATAux3.disabled = false;
         contadorPRRes();
+        inputProdAux3EmptyBefore = true;
     }
 
 }
