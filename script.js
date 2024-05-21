@@ -186,6 +186,7 @@ function inputsDeshabilitadosPresPR() {
     }
 }
 
+
 let inputATSecEmptyBefore = true;
 let inputATSecEmptyAfter = true;
 function inputsDeshabilitadosSecAT() {
@@ -207,16 +208,23 @@ function inputsDeshabilitadosSecAT() {
     }
 }
 
+
+let inputProdSecEmptyBefore = true;
+let inputProdSecEmptyAfter = true;
 function inputsDeshabilitadosSecPR() {
 
     if (inputProdSec.value !== ""){
         //inputATSec.value = "";
         inputATSec.disabled = true;  
-        //contadorPRSum(inputProdSec);      
-        if (contadorPRSum(inputProdSec)){inputATSec.disabled = false;}
+        //contadorPRSum(inputProdSec);
+        if (inputProdSecEmptyBefore && inputProdSecEmptyAfter) {
+            if (contadorPRSum(inputProdSec)){inputATSec.disabled = false;}
+        }
+        inputProdSecEmptyBefore = false;
     } else {
         inputATSec.disabled = false;
         contadorPRRes();
+        inputATSecEmptyBefore = true;
     }
 }
 
