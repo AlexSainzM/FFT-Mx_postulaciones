@@ -186,6 +186,8 @@ function inputsDeshabilitadosPresPR() {
     }
 }
 
+let inputATSecEmptyBefore = true;
+let inputATSecEmptyAfter = true;
 function inputsDeshabilitadosSecAT() {
     //SecretarioAT
 
@@ -193,11 +195,15 @@ function inputsDeshabilitadosSecAT() {
         //inputProdSec.value = "";
         inputProdSec.disabled = true;
         //contadorATSum(inputATSec);
-        if (contadorATSum(inputATSec)){inputProdSec.disabled = false;}
+        if (inputATSecEmptyBefore && inputATSecEmptyAfter){
+            if (contadorATSum(inputATSec)){inputProdSec.disabled = false;}
+        }
+        inputATSecEmptyBefore = false;
         //noReapeatedInputs();
     } else {
         inputProdSec.disabled = false;
         contadorATRes();
+        inputATSecEmptyBefore = true;
     }
 }
 
