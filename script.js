@@ -268,10 +268,11 @@ function inputsDeshabilitadosAux1PR() {
         contadorPRRes();
         inputProdAux1EmptyBefore = true; 
     }
-
 }
 
 
+let inputATAux2EmptyBefore = true;
+let inputATAux2EmptyAfter = true;
 function inputsDeshabilitadosAux2AT() {
     //Auxiliar2AT
 
@@ -279,14 +280,20 @@ function inputsDeshabilitadosAux2AT() {
         //inputProdAux2.value = "";
         inputProdAux2.disabled = true;
         //contadorATSum(inputATAux2);
-        if (contadorATSum(inputATAux2)){inputProdAux2.disabled = false;}
-
+        if (inputATAux2EmptyBefore && inputATAux2EmptyAfter) {
+            if (contadorATSum(inputATAux2)){inputProdAux2.disabled = false;}
+        }
+        inputATAux2EmptyBefore = false;
     } else {
         inputProdAux2.disabled = false;
         contadorATRes();
+        inputATAux2EmptyBefore = true;
     }
 }
 
+
+let inputProdAux2EmptyBefore = true;
+let inputProdAux2EmptyAfter = true;
 function inputsDeshabilitadosAux2PR() {
     //Auxiliar2PR
 
@@ -294,11 +301,14 @@ function inputsDeshabilitadosAux2PR() {
         //inputATAux2.value = "";
         inputATAux2.disabled = true;   
         //contadorPRSum(inputProdAux2);     
-        if (contadorPRSum(inputProdAux2)){inputATAux2.disabled = false;}
-
+        if (inputProdAux2EmptyBefore && inputProdAux2EmptyAfter) {
+            if (contadorPRSum(inputProdAux2)){inputATAux2.disabled = false;}
+        }
+        inputProdAux2EmptyBefore = false;
     } else {
         inputATAux2.disabled = false;
         contadorPRRes();
+        inputProdAux2EmptyBefore = true;
     }
 }
 
