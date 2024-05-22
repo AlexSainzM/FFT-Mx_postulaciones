@@ -34,6 +34,41 @@ let contadorGeneral = 0;
 let contadorAT = 0;
 let contadorProd = 0;
 
+function noEsPrimero(valor, indice, lista) {
+    return !(lista.indexOf(valor) === indice);
+}
+
+
+
+
+function noReapeatedInputs() {
+    
+    let ATValid = false;
+    let prodValid = false;
+
+    let arrayAT = [];
+    let arrayATValid = [];
+
+    arrayAT.push(inputATPres.value);
+    arrayAT.push(inputATSec.value);
+    arrayAT.push(inputATAux1.value);
+    arrayAT.push(inputATAux2.value);
+    arrayAT.push(inputATAux3.value);
+    arrayAT.push(inputATAux4.value);
+
+    arrayAT.forEach(element => {
+        if (element !== ""){
+            arrayATValid.push(element);
+        }
+    });
+
+    console.log(arrayATValid);
+    console.log("aRRATatvalID tiene repetidos?", arrayATValid.some(noEsPrimero));
+
+}
+
+
+
 //validacion de valores repetidos
 /*
 function noReapeatedInputs() {
