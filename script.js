@@ -61,7 +61,7 @@ function noRepeatedATInputs() {
 
     console.log(arrayATValid);
     console.log("aRRATatvalID tiene repetidos?", arrayATValid.some(noEsPrimero));
-    if (arrayATValid.some(noEsPrimero)) {
+    if (arrayATValid.some(noEsPrimero) || arrayATValid.length !== 3) {
         ATValid = true;
     } else { ATValid = false; }
 }
@@ -85,7 +85,7 @@ function noRepeatedProdInputs() {
 
     console.log(arrayProdValid);
     console.log("aRRATProdvalID tiene repetidos?", arrayProdValid.some(noEsPrimero));
-    if (arrayProdValid.some(noEsPrimero)) {
+    if (arrayProdValid.some(noEsPrimero) || arrayProdValid.length !== 3) {
         prodValid = true;
     } else { prodValid = false; }
 }
@@ -93,7 +93,7 @@ function noRepeatedProdInputs() {
 
 function validarFormularioFinal() {
     if (ATValid || prodValid){
-        alert("No es posible nominar 2 veces a la misma persona");
+        alert("No es posible nominar 2 veces a la misma persona, ni dejar campos vacios.");
     }
 }
 
