@@ -35,6 +35,7 @@ let contadorAT = 0;
 let contadorProd = 0;
 
 //validacion de valores repetidos
+/*
 function noReapeatedInputs() {
     //Primero obtenemos los valores de los inputs
     const inputs = [
@@ -72,6 +73,7 @@ function noReapeatedInputs() {
         for (let valor in ocurrencias) {
             if (ocurrencias[valor] > 1) {
                 alert("Se han encontrado entradas repetidas. Por favor revisa tus respuestas. No es posible nominar 2 veces a la misma persona");
+                
                 return;
             }
         }
@@ -80,6 +82,7 @@ function noReapeatedInputs() {
 
     
 }
+*/
 
 
 //Esta funcion retorna el valor del contador que este execiendo las 3 posibles selecciones. 
@@ -145,11 +148,11 @@ function contadorPRRes() {
 //Las funciones contadorATSum y contadorATRes controlan los contadores de AT y respectivamente lo hacen las funciones PROD o PR. 
 //Estas funciones hacen llamados a otras funciones que validad que no exitan mas de 3 campos para AT, controlan los contadores, habilitan y deshabilitan los inputs y dan las alertas correspondientes.
 
+/*-----------------------------*/
+//Input Presidente AT
 let inputATPresEmptyBefore = true;
 let inputATPresEmptyAfter = true;
 function inputsDeshabilitadosPresAT() {
-    
-    //PresidenteAT
 
     if (inputATPres.value !== ""){
         //inputProdPres.value = "";
@@ -173,11 +176,13 @@ function inputsDeshabilitadosPresAT() {
     }
 }
 
+
+/*---------------------------------*/
+//Input Presidente Prod
 let inputProdPresEmptyBefore = true;
 let inputProdPresEmptyAfter = true;
 function inputsDeshabilitadosPresPR() {
     
-    //PresidentePR
     if (inputProdPres.value !== ""){
         //inputATPres.value = "";
         inputATPres.disabled = true;
@@ -185,7 +190,15 @@ function inputsDeshabilitadosPresPR() {
         if (inputProdPresEmptyBefore && inputProdPresEmptyAfter) {
             if (contadorPRSum(inputProdPres)){inputATPres.disabled = false;}
         }
+
         inputProdPresEmptyBefore = false;
+
+        if (!(inputProdPresEmptyBefore && inputProdPresEmptyAfter)) {
+            if (!(inputProdPres.value !== "")){
+                inputProdPresEmptyBefore = true;
+            }
+        }
+
     } else {
         inputATPres.disabled = false;
         contadorPRRes();
@@ -206,7 +219,14 @@ function inputsDeshabilitadosSecAT() {
         if (inputATSecEmptyBefore && inputATSecEmptyAfter){
             if (contadorATSum(inputATSec)){inputProdSec.disabled = false;}
         }
+
         inputATSecEmptyBefore = false;
+
+        if (!(inputATSecEmptyBefore && inputATSecEmptyAfter)) {
+            if (!(inputATSec.value !== "")){
+                inputATSecEmptyBefore = true;
+            }
+        }
         //noReapeatedInputs();
     } else {
         inputProdSec.disabled = false;
@@ -227,7 +247,15 @@ function inputsDeshabilitadosSecPR() {
         if (inputProdSecEmptyBefore && inputProdSecEmptyAfter) {
             if (contadorPRSum(inputProdSec)){inputATSec.disabled = false;}
         }
+
         inputProdSecEmptyBefore = false;
+
+        if (!(inputProdSecEmptyBefore && inputProdSecEmptyAfter)) {
+            if (!(inputProdSec.value !== "")){
+                inputProdSecEmptyBefore = true;
+            }
+        }
+
     } else {
         inputATSec.disabled = false;
         contadorPRRes();
@@ -248,7 +276,15 @@ function inputsDeshabilitadosAux1AT() {
         if (inputATAux1EmptyBefore && inputATAux1EmptyAfter){
             if (contadorATSum(inputATAux1)){inputProdAux1.disabled = false;}
         }
+
         inputATAux1EmptyBefore = false;
+
+        if (!(inputATAux1EmptyBefore && inputATAux1EmptyAfter)) {
+            if (!(inputATAux1.value !== "")){
+                inputATAux1EmptyBefore = true;
+            }
+        }
+
     } else {
         inputProdAux1.disabled = false;
         contadorATRes();
@@ -269,7 +305,15 @@ function inputsDeshabilitadosAux1PR() {
         if (inputProdAux1EmptyBefore && inputProdAux1EmptyAfter) {
             if (contadorPRSum(inputProdAux1)){inputATAux1.disabled = false;}
         }
+
         inputProdAux1EmptyBefore = false;
+
+        if (!(inputProdAux1EmptyBefore && inputProdAux1EmptyAfter)) {
+            if (!(inputProdAux1.value !== "")){
+                inputProdAux1EmptyBefore = true;
+            }
+        }
+
     } else {
         inputATAux1.disabled = false;
         contadorPRRes();
@@ -290,7 +334,15 @@ function inputsDeshabilitadosAux2AT() {
         if (inputATAux2EmptyBefore && inputATAux2EmptyAfter) {
             if (contadorATSum(inputATAux2)){inputProdAux2.disabled = false;}
         }
+
         inputATAux2EmptyBefore = false;
+
+        if (!(inputATAux2EmptyBefore && inputATAux2EmptyAfter)) {
+            if (!(inputATAux2.value !== "")){
+                inputATAux2EmptyBefore = true;
+            }
+        }
+
     } else {
         inputProdAux2.disabled = false;
         contadorATRes();
@@ -311,7 +363,15 @@ function inputsDeshabilitadosAux2PR() {
         if (inputProdAux2EmptyBefore && inputProdAux2EmptyAfter) {
             if (contadorPRSum(inputProdAux2)){inputATAux2.disabled = false;}
         }
+
         inputProdAux2EmptyBefore = false;
+
+        if (!(inputProdAux2EmptyBefore && inputProdAux2EmptyAfter)) {
+            if (!(inputProdAux2.value !== "")){
+                inputProdAux2EmptyBefore = true;
+            }
+        }
+
     } else {
         inputATAux2.disabled = false;
         contadorPRRes();
@@ -332,7 +392,15 @@ function inputsDeshabilitadosAux3AT() {
         if (inputATAux3EmptyBefore && inputATAux3EmptyAfter) {
             if (contadorATSum(inputATAux3)){inputProdAux3.disabled = false;}
         }
+
         inputATAux3EmptyBefore = false;
+
+        if (!(inputATAux3EmptyBefore && inputATAux3EmptyAfter)) {
+            if (!(inputATAux3.value !== "")){
+                inputATAux3EmptyBefore = true;
+            }
+        }
+
     } else {
         inputProdAux3.disabled = false;
         contadorATRes();
@@ -352,7 +420,15 @@ function inputsDeshabilitadosAux3PR() {
         if (inputProdAux3EmptyBefore && inputProdAux3EmptyAfter) {
             if (contadorPRSum(inputProdAux3)){inputATAux3.disabled = false;}
         }
+
         inputProdAux3EmptyBefore = false;
+
+        if (!(inputProdAux3EmptyBefore && inputProdAux3EmptyAfter)) {
+            if (!(inputProdAux3.value !== "")){
+                inputProdAux3EmptyBefore = true;
+            }
+        }
+
     } else {
         inputATAux3.disabled = false;
         contadorPRRes();
@@ -374,7 +450,15 @@ function inputsDeshabilitadosAux4AT() {
         if (inputATAux4EmptyBefore && inputATAux4EmptyAfter) {
             if (contadorATSum(inputATAux4)){inputProdAux4.disabled = false;}
         }
+
         inputATAux4EmptyBefore = false;
+
+        if (!(inputATAux4EmptyBefore && inputATAux4EmptyAfter)) {
+            if (!(inputATAux4.value !== "")){
+                inputATAux4EmptyBefore = true;
+            }
+        }
+
     } else {
         inputProdAux4.disabled = false;
         contadorATRes();
@@ -394,7 +478,15 @@ function inputsDeshabilitadosAux4PR() {
         if (inputProdAux4EmptyBefore && inputProdAux4EmptyAfter) {
             if (contadorPRSum(inputProdAux4)){inputATAux4.disabled = false;}
         }
+
         inputProdAux4EmptyBefore = false;
+
+        if (!(inputProdAux4EmptyBefore && inputProdAux4EmptyAfter)) {
+            if (!(inputProdAux4.value !== "")){
+                inputProdAux4EmptyBefore = true;
+            }
+        }
+
     } else {
         inputATAux4.disabled = false;
         contadorPRRes();
