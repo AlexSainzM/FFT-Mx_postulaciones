@@ -157,7 +157,14 @@ function inputsDeshabilitadosPresAT() {
         if (inputATPresEmptyBefore && inputATPresEmptyAfter) {
             if (contadorATSum(inputATPres)){inputProdPres.disabled = false;}
         }
+        
         inputATPresEmptyBefore = false;
+
+        if (!(inputATPresEmptyBefore && inputATPresEmptyAfter)) {
+            if (!(inputATPres.value !== "")){
+                inputATPresEmptyBefore = true;
+            }
+        }
         //contadorATSum(inputATPres);
     } else {
         inputProdPres.disabled = false;
