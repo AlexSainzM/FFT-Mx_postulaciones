@@ -153,7 +153,7 @@
 
                 
 
-                <form class="needs-validation"  novalidate id="nominacionesFFTForm"> <!--action="https://formspree.io/f/mwkgzebo"
+                <form action="./includes/formhandler.inc.php" method="post" class="needs-validation"  novalidate id="nominacionesFFTForm"> <!--action="https://formspree.io/f/mwkgzebo"
                     method="POST"-->
                     <div class="bd-example">
                         
@@ -716,7 +716,7 @@
 
                                         <hr class="my-4">
 
-                                        <button class="w-100 btn btn-lg buttonFFTGreen mb-3"  type="button" id="botonEnviarCuestionario" onclick="botonSubmit()">
+                                        <button class="w-100 btn btn-lg buttonFFTGreen mb-3"  type="submit" id="botonEnviarCuestionario" onclick="botonSubmit()">
                                             <h5>Finalizar cuestionario</h5>
                                         </button>
 
