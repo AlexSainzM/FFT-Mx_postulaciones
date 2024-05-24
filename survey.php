@@ -138,10 +138,8 @@
                           <p class="col-md-12"><Strong>Puedes postularte a ti mismo</Strong></p>
                         </div>
                         <div class="modal-footer">
-                          <div class="mb-3">
-                            <a href="" class="btn btn-lg px-4 buttonFFTGreen" >Continuar</a>
-                          </div>
-                          <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cancelar</button>
+                          
+                          <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cerrar</button>
                           <!--Botones del Modal deshabilidatados
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                           <button type="button" class="btn btn-primary">Understood</button>
@@ -719,7 +717,7 @@
                                       
                                         <div class="col-md-12">
                                             <button type="button" class="btn btn-lg px-4 buttonFFTGreen" data-bs-toggle="modal" data-bs-target="#staticBackdropLive2" onclick="botonSubmit()" id="boton11">
-                                                Ver instrucciones
+                                                Validar mis respuestas. 
                                             </button>
                                         </div>
                                               
@@ -729,21 +727,19 @@
                                             <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLiveLabel">Te pedimos participar con responsabilidad en este ejercicio</h5>
+                                                    <h5 class="modal-title" id="staticBackdropLiveLabel">Si no esta habilitado el botón de envío. Por favor revisa tus respuestas.</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
                                                
                                                 <button class="w-100 btn btn-lg buttonFFTGreen mb-3"  type="submit" id="botonEnviarCuestionario" onclick="">
-                                                <h5>Finalizar cuestionario</h5>
+                                                <h5>Enviar Cuestionario</h5>
                                                 </button>
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                <div class="mb-3">
-                                                    <a href="" class="btn btn-lg px-4 buttonFFTGreen" >Continuar</a>
-                                                </div>
-                                                <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cancelar</button>
+                                                
+                                                <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cerrar</button>
                                                 <!--Botones del Modal deshabilidatados
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                 <button type="button" class="btn btn-primary">Understood</button>

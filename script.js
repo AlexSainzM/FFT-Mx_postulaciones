@@ -15,11 +15,7 @@ let botonEnviarC = document.getElementById("botonEnviarCuestionario");
 botonEnviarC.disabled = true;
 
 
-function habilitarEnviado () {
-    if (ATValid && prodValid) {
-        botonEnviarC.disabled = false;
-    }
-}
+
 
 //Ahora creamos limpiamos los datos del formulario antes de comenzar
 inputATPres.value = "";
@@ -101,6 +97,9 @@ function noRepeatedProdInputs() {
 function validarFormularioFinal() {
     if (ATValid || prodValid){
         alert("No es posible nominar 2 veces a la misma persona, ni dejar campos vacios.");
+        botonEnviarC.disabled = true;
+    } else {
+        botonEnviarC.disabled = false;
     }
 }
 
@@ -580,5 +579,5 @@ function inputsDeshabilitadosAux4PR() {
 //Función del botón enviar formulario. 
 function botonSubmit() {
     noReapeatedInputs();
-    habilitarEnviado();
+    
 }
