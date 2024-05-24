@@ -12,7 +12,14 @@ let inputProdAux2 = document.getElementById("inputProdAuxiliar2");
 let inputProdAux3 = document.getElementById("inputProdAuxiliar3");
 let inputProdAux4 = document.getElementById("inputProdAuxiliar4");
 let botonEnviarC = document.getElementById("botonEnviarCuestionario");
+botonEnviarC.disabled = true;
 
+
+function habilitarEnviado () {
+    if (ATValid && prodValid) {
+        botonEnviarC.disabled = false;
+    }
+}
 
 //Ahora creamos limpiamos los datos del formulario antes de comenzar
 inputATPres.value = "";
@@ -573,4 +580,5 @@ function inputsDeshabilitadosAux4PR() {
 //Función del botón enviar formulario. 
 function botonSubmit() {
     noReapeatedInputs();
+    habilitarEnviado();
 }
