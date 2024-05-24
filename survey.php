@@ -139,7 +139,7 @@
                         </div>
                         <div class="modal-footer">
                           <div class="mb-3">
-                            <a href="./survey.html" class="btn btn-lg px-4 buttonFFTGreen" >Continuar</a>
+                            <a href="" class="btn btn-lg px-4 buttonFFTGreen" >Continuar</a>
                           </div>
                           <button type="button" class="btn btn-secondary mb-3" data-bs-dismiss="modal">Cancelar</button>
                           <!--Botones del Modal deshabilidatados

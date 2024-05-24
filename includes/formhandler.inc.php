@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         require_once "dbh.inc.php";
 
-    aux4AT VARCHAR(100) DEFAULT NULL, 
+
         $query = "INSERT INTO nominacionesFFTCTMX2024 (presidenteAT, presidenteProd, secretarioAT, secretarioProd, aux1AT, aux1Prod, aux2AT, aux2Prod, aux3AT, aux3Prod, aux4AT, aux4Prod) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         $stmt = $pdo->prepare($query);
