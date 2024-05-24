@@ -153,10 +153,7 @@
 
                 
 
-                
-                
-
-                <form class="needs-validation"  novalidate id="miFormulario"> <!--action="https://formspree.io/f/mwkgzebo"
+                <form class="needs-validation"  novalidate id="nominacionesFFTForm"> <!--action="https://formspree.io/f/mwkgzebo"
                     method="POST"-->
                     <div class="bd-example">
                         
@@ -182,7 +179,7 @@
                                                 
                                                 <div class="col">
                                                         <label for="inputATPresidente" class="form-label">Personal Técnico - Administrativo</label>
-                                                        <input class="form-control" list="listaAT" id="inputATPresidente" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosPresAT()" >
+                                                        <input class="form-control" list="listaAT" id="inputATPresidente" name="inputATPresidente" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosPresAT()" >
                                                         <datalist id="listaAT">
                                                             <option value='TEODORO GONZALEZ ISRAEL'>
                                                             <option value='GÖRLICH FLORIAN MANUEL'>
@@ -436,7 +433,7 @@
                                                 
                                                 <div class="col">
                                                         <label for="inputProdPresidente" class="form-label">Personal Producción</label>
-                                                        <input class="form-control" list="listaProd" id="inputProdPresidente" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosPresPR()">
+                                                        <input class="form-control" list="listaProd" id="inputProdPresidente" name="inputProdPresidente" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosPresPR()">
                                                         <datalist id="listaProd">
                                                             <option value='AGUIRRE LOPEZ JORGE'>
                                                             <option value='MARQUEZ MENDEZ PAULINA IRANDY'>
@@ -608,12 +605,12 @@
                                             <div class="row align-items-center">
                                                 <div class="col">
                                                         <label for="inputATSecretario" class="form-label">Personal Técnico - Administrativo</label>
-                                                        <input class="form-control" list="listaAT" id="inputATSecretario" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosSecAT()">                                                        
+                                                        <input class="form-control" list="listaAT" id="inputATSecretario" name="inputATSecretario" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosSecAT()">                                                        
                                                 </div>
                                                 
                                                 <div class="col">
                                                         <label for="inputProdSecretario" class="form-label">Personal Producción</label>
-                                                        <input class="form-control" list="listaProd" id="inputProdSecretario" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosSecPR()">                                                        
+                                                        <input class="form-control" list="listaProd" id="inputProdSecretario" name="inputProdSecretario" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosSecPR()">                                                        
                                                 </div>                       
                                             </div>
                                             
@@ -652,11 +649,11 @@
                                             <div class="row align-items-center">
                                                 <div class="col">
                                                         <label for="inputATAuxiliar1" class="form-label">Personal Técnico - Administrativo</label>
-                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar1" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux1AT()">                                        
+                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar1" name="inputATAuxiliar1" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux1AT()">                                        
                                                 </div>
                                                 <div class="col">
                                                         <label for="inputProdAuxiliar1" class="form-label">Personal Producción</label>
-                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar1" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux1PR()">                                            
+                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar1" name="inputProdAuxiliar1" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux1PR()">                                            
                                                 </div>                      
                                             </div>
                                             
@@ -670,11 +667,11 @@
                                             <div class="row align-items-center">
                                                 <div class="col">
                                                         <label for="inputATAuxiliar2" class="form-label">Personal Técnico - Administrativo</label>
-                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar2" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux2AT()">
+                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar2" name="inputATAuxiliar2" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux2AT()">
                                                 </div>
                                                 <div class="col">
                                                         <label for="inputProdAuxiliar2" class="form-label">Personal Producción</label>
-                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar2" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux2PR()">
+                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar2" name="inputProdAuxiliar2" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux2PR()">
                                                 </div>                      
                                             </div>
                                             
@@ -688,11 +685,11 @@
                                             <div class="row align-items-center">
                                                 <div class="col">
                                                         <label for="inputATAuxiliar3" class="form-label">Personal Técnico - Administrativo</label>
-                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar3" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux3AT()">                                                        
+                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar3" name="inputATAuxiliar3" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux3AT()">                                                        
                                                 </div>
                                                 <div class="col">
                                                         <label for="inputProdAuxiliar3" class="form-label">Personal Producción</label>
-                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar3" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux3PR()">                                                        
+                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar3" name="inputProdAuxiliar3" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux3PR()">                                                        
                                                 </div>                      
                                             </div>
                                             
@@ -706,11 +703,11 @@
                                             <div class="row align-items-center">
                                                 <div class="col">
                                                         <label for="inputATAuxiliar4" class="form-label">Personal Técnico - Administrativo</label>
-                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar4" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux4AT()">                                                        
+                                                        <input class="form-control" list="listaAT" id="inputATAuxiliar4" name="inputATAuxiliar4" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux4AT()">                                                        
                                                 </div>
                                                 <div class="col">
                                                         <label for="inputProdAuxiliar4" class="form-label">Personal Producción</label>
-                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar4" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux4PR()">                                                        
+                                                        <input class="form-control" list="listaProd" id="inputProdAuxiliar4" name="inputProdAuxiliar4" placeholder="Escribe para buscar..." onchange="inputsDeshabilitadosAux4PR()">                                                        
                                                 </div>                      
                                             </div>
                                             
