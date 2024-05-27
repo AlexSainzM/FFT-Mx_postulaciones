@@ -32,19 +32,9 @@ inputProdAux3.value = "";
 inputProdAux4.value = "";
 
 
-document.getElementById('nominacionesFFTForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var formData = new FormData(document.getElementById('myForm'));
-
-    fetch('https://script.google.com/macros/s/AKfycby25ldrgq5nPLtAy3OTD3uGXgMJLCL0RTdciLGHNbSZzu_0lHuSEE65J_96RTlqTn-b/exec', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert(data);
-    });
-});
+//document.getElementById('nominacionesFFTForm').addEventListener('submit', function(event) {
+    
+//});
 
 
 //Inicializamos los contadores para la validación
@@ -594,5 +584,15 @@ function inputsDeshabilitadosAux4PR() {
 //Función del botón enviar formulario. 
 function botonSubmit() {
     noReapeatedInputs();
-    
+    event.preventDefault();
+    var formData = new FormData(document.getElementById('nominacionesFFTForm'));
+
+    fetch('https://script.google.com/macros/s/AKfycbzcF9ViQ7_04ShP2CskJzU27SpNzJcHOQ55brO5IpuV3wUBna6ym__OKdLq4PXhbaof/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    });
 }
