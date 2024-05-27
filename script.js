@@ -32,6 +32,21 @@ inputProdAux3.value = "";
 inputProdAux4.value = "";
 
 
+document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var formData = new FormData(document.getElementById('myForm'));
+
+    fetch('https://script.google.com/macros/s/AKfycby25ldrgq5nPLtAy3OTD3uGXgMJLCL0RTdciLGHNbSZzu_0lHuSEE65J_96RTlqTn-b/exec', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    });
+});
+
+
 //Inicializamos los contadores para la validación
 let contadorGeneral = 0;
 let contadorAT = 0;
