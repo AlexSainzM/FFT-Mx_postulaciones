@@ -583,8 +583,11 @@ function inputsDeshabilitadosAux4PR() {
 
 //Función del botón enviar formulario. 
 function botonSubmit() {
-    noReapeatedInputs();
-    event.preventDefault();
+    noReapeatedInputs();   
+}
+
+function submitInfo() {
+    //event.preventDefault();
     var formData = new FormData(document.getElementById('nominacionesFFTForm'));
 
     fetch('https://script.google.com/macros/s/AKfycbzcF9ViQ7_04ShP2CskJzU27SpNzJcHOQ55brO5IpuV3wUBna6ym__OKdLq4PXhbaof/exec', {
@@ -596,3 +599,5 @@ function botonSubmit() {
         alert(data);
     });
 }
+
+botonEnviarC.addEventListener("click", submitInfo);
