@@ -32,7 +32,7 @@ inputProdAux3.value = "";
 inputProdAux4.value = "";
 
 
-document.getElementById('myForm').addEventListener('submit', function(event) {
+document.getElementById('nominacionesFFTForm').addEventListener('submit', function(event) {
     event.preventDefault();
     var formData = new FormData(document.getElementById('myForm'));
 
