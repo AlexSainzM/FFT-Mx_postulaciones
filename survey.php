@@ -710,7 +710,7 @@
                                             <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLiveLabel">Si no esta habilitado el botón de envío. Por favor revisa tus respuestas.</h5>
+                                                    <h5 class="modal-title" id="staticBackdropLiveLabel">No es posible nominar 2 veces a la misma persona, ni dejar campos vacios. Si no esta habilitado el botòn de envio, por favor revisa tus respuestas. </h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
