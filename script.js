@@ -586,8 +586,18 @@ function botonSubmit() {
     noReapeatedInputs();   
 }
 
-function submitInfo() {
-    //event.preventDefault();
+
+function handleSubmit(event) {
+    event.preventDefault();
+  
+    if (localStorage.getItem("formSubmitted")) {
+      alert("Ya has enviado este formulario.");
+      return;
+    }
+  
+    // Código para enviar el formulario
+    // ...
+    event.preventDefault();
     var formData = new FormData(document.getElementById('nominacionesFFTForm'));
 
     fetch('https://script.google.com/macros/s/AKfycbzcF9ViQ7_04ShP2CskJzU27SpNzJcHOQ55brO5IpuV3wUBna6ym__OKdLq4PXhbaof/exec', {
@@ -598,6 +608,13 @@ function submitInfo() {
     .then(data => {
         alert(data);
     });
+  
+    localStorage.setItem("formSubmitted", "true");
+    alert("Formulario enviado con éxito.");
+  }
+
+function submitInfo() {
+    
 }
 
-botonEnviarC.addEventListener("click", submitInfo);
+botonEnviarC.addEventListener("click", handleSubmit);
